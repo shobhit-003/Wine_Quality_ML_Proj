@@ -10,7 +10,7 @@ logging.basicConfig(level = logging.INFO, format = '[%(asctime)s]: %(message)s:'
 project_name = "mlProject" # any name we want to give
 
 # __init__.py -> If we want to use/install any folder as local package then we create __ini__.py constructor file in it to make it a package
-# another method -> using sys command, then we have to give the path in interpreter which is very hectic and have to do it every time
+# another method -> using sys command, then we have to give the path in interpreter which is very hectic and have to do it every time but on server we can't do like this
 
 # we can access python files within a folder just simply write import "file_name"
 # Use of local package -> .py file itself a package but if a python file is in another folder then we can't directly access it like
