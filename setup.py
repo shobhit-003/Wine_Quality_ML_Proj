@@ -15,10 +15,8 @@ setup(
 # packages = this parameter specifies which packages should be included in distribution
 
 # find_packages() function is used to automatically discover packages under the 'src' dir and include them in distribution
-# there is mlproject inside 'src' which is having __init__ so it will create mlproject as local package
-# don't think like that inside there are many folders the why there are also not made local packages?
-# bcoz whatever inside 'mlproject' is accessible if we can access 'mlproject'
-# thats why we give dir as 'src' not 'mlproject' otherwise it will create all the folders in mlproject also local packages which is unnecessary
+# there is mlproject inside 'src' which is having __init__ so it will create mlproject as package and include in distribution
+# and whatever inside mlProject will also accessible (obviously), if we can acces mlProject
 
 # we don't need to explicitly use package_dir argument
 # and we don't have to explicitly pass where = "src" inside find_packages() as it will search whole root directory
