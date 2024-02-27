@@ -12,7 +12,7 @@ instead of creating custom exception here we are using BoxValueError from Box Ex
 import os
 from box.exceptions import BoxValueError
 import yaml
-from src.mlProject.logging.logging import logger
+from mlProject.logging.logging import logger # as mlProject has created as local package, we can access directly without using src.mlProject
 import json
 import joblib
 from ensure import ensure_annotations
