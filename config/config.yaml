@@ -1,0 +1,8 @@
+artifacts_root: artifacts # created folder to keep all the data in local machine
+
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion # create data_ingestion folder inside i.e on our machine
+  source_url: https://github.com/shobhit-003/Database/raw/main/winequality-red.zip # fetching data from this database
+  local_data_file: artifacts/data_ingestion/data.zip # here we are giving this dataset name "data", we can give any name to it
+  unzip_dir: artifacts/data_ingestion # now we are unzipping the data file
