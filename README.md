@@ -35,3 +35,5 @@ first try to build whole model like from getting data to predicting in one go an
 7. update the data ingestion component -> now download the data and extract it.
 
 8. update the pipeline -> pipeline is nothing but sequence of methods, which you want to call first and so on. To understand the flow for data ingestion that what we are doing and why we are doing, just see the pipeline.
+
+9. update main.py -> launch the data ingestion in main.py
