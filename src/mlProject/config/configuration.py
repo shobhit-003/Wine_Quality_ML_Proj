@@ -7,6 +7,7 @@ from mlProject.utils.common import read_yaml, create_directories
 need to import entity i.e. class in this notebook to use it
 """
 from mlProject.entity.config_entity import DataIngestionConfig 
+from mlProject.entity.config_entity import DataValidationConfig 
 
 class ConfigurationManager:
     # as soon as obj created, it should read the yaml files and create artifact folder related to data ingestion
@@ -38,3 +39,20 @@ class ConfigurationManager:
         )
 
         return data_ingestion_config # returning the object
+    
+
+
+    def get_data_validation_config(self) -> DataValidationConfig:
+        config = self.config.data_validation # get the configuration for data validation from whole configuration
+        schema = self.schema.COLUMNS # get the schema used in training
+
+        create_directories([config.root_dir]) # create the root_dir i.e. 'data validation' folder inside artifacts folder
+
+        data_validation_config = DataValidationConfig(
+            root_dir = config.root_dir,
+            status_file = config.status_file,
+            unzip_data_dir = config.unzip_data_dir,
+            all_schema = schema
+        )
+
+        return data_validation_config # return the object

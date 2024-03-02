@@ -4,10 +4,23 @@ import zipfile # to unzip the file
 from pathlib import Path
 from mlProject.logging.logging import logger
 from mlProject.utils.common import get_size
+""""
+Don't be confused as we have used 'DataIngestionConfig' name at two places
+so which should be placed here? this thing will occur will all, like with DataValidationConfig too
 
+
+from mlProject.config.configuration import DataIngestionConfig
+or
+from mlProject.entity.config_entity import DataIngestionConfig
+
+As we are making component i.e. entity so import entity
+in the entity, we just define data types i.e. entity is just skeleton
+configuration manager is basically setting up the entity like folder creation and fetching the links
+i.e. in config manager we are giving the values to variables defined in the entity i.e. giving life
+even config.configuration doesn't have DataIngestionConfig, it is also importing it from entity
 """
-import entity
-"""
+
+# import entity i.e. skeleton bcoz we will call config. in the constructor and give life to it
 from mlProject.entity.config_entity import DataIngestionConfig
 
 class DataIngestion:

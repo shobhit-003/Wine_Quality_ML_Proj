@@ -14,16 +14,15 @@ class DataIngestionTrainingPipeline:
         pass
 
     def main(self):
-        config = ConfigurationManager() # step 1 -> fetching all the yaml files (config, params, schema) and creating folder 'artifacts'
-    
-        data_ingestion_config = config.get_data_ingestion_config() # step 2 -> now this object has all the info regarding data ingestion that
-        # from where it has to take data(url) and dump it(local machine) and unzipping and also create 'data_ingestion' folder inside 'artifacts' folder 
+        config = ConfigurationManager() # step 1 -> getting the configuration manager
         
-        data_ingestion = DataIngestion(config=data_ingestion_config) # step 3 -> creating an obj by passing all the arguments get in step 2.
+        data_ingestion_config = config.get_data_ingestion_config() # step 2 -> getting the object of data ingestion which is having all info like source file path and all
         
-        data_ingestion.download_file() # step 4
+        data_ingestion = DataIngestion(config=data_ingestion_config) # step 3 -> create the component related to this object, make 2 components
         
-        data_ingestion.extract_zip_file() # step 5
+        data_ingestion.download_file() # step 4 -> fetching the component
+        
+        data_ingestion.extract_zip_file() # step 5 -> fetching the component
 
 
 if __name__ == '__main':

@@ -28,12 +28,20 @@ first try to build whole model like from getting data to predicting in one go an
 
 4. update the constants -> put the path links of config.yaml, schema.yaml and params.yaml are in this folder (as these folders items i.e. data ingestion source, data's feature (in case of ML), and hyperparameter are not going to change, we keep them under constants)
 
-5. update/create the data ingestion entity -> here entity is nothing but data ingestion, the config we have setup in config.yaml, make a dataclass of that type
+5. update/create the entity (skeleton)-> create data class and assign variables which you are going to use along with their data type
 
-6. update the configuration manager for data ingestion in src config -> it will return all the root_dir, source_url, local_data_file, unzip_dir in one shot
+6. update the configuration manager in src config -> here you are giving life to your skeleton i.e. creating an object and assigning values to variables and it's obvious then it should return this object
 
-7. update the data ingestion component -> now download the data and extract it.
+like in case of data ingestion, it  will create an object which is having the root_dir, source_url, local_data_file, unzip_dir in it.
+
+similarly for data validation it will have root_dir, status_file, unzip_data_dir and schema in it
+
+7. update the component -> now create the component related to entity like
+
+for data ingestion - first download the file and then extract the zip file
+
+for data  validation - validate all the columns
 
 8. update the pipeline -> pipeline is nothing but sequence of methods, which you want to call first and so on. To understand the flow for data ingestion that what we are doing and why we are doing, just see the pipeline.
 
-9. update main.py -> launch the data ingestion in main.py
+9. update main.py -> launch the pipeline in main.py

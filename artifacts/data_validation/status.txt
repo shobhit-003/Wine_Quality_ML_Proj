@@ -1,0 +1,24 @@
+Col Name: fixed acidity, Col type: float64 
+Validation Status: True 
+Col Name: volatile acidity, Col type: float64 
+Validation Status: True 
+Col Name: citric acid, Col type: float64 
+Validation Status: True 
+Col Name: residual sugar, Col type: float64 
+Validation Status: True 
+Col Name: chlorides, Col type: float64 
+Validation Status: True 
+Col Name: free sulfur dioxide, Col type: float64 
+Validation Status: True 
+Col Name: total sulfur dioxide, Col type: float64 
+Validation Status: True 
+Col Name: density, Col type: float64 
+Validation Status: True 
+Col Name: pH, Col type: float64 
+Validation Status: True 
+Col Name: sulphates, Col type: float64 
+Validation Status: True 
+Col Name: alcohol, Col type: float64 
+Validation Status: True 
+Col Name: quality, Col type: int64 
+Validation Status: True 
