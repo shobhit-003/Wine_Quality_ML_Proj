@@ -4,10 +4,11 @@
 from mlProject.constants import *
 from mlProject.utils.common import read_yaml, create_directories
 """
-need to import entity i.e. class in this notebook to use it
+need to import entity i.e. skeleton in this notebook to use it i.e. to give it to life
 """
 from mlProject.entity.config_entity import DataIngestionConfig 
-from mlProject.entity.config_entity import DataValidationConfig 
+from mlProject.entity.config_entity import DataValidationConfig
+from mlProject.entity.config_entity import DataTransformationConfig
 
 class ConfigurationManager:
     # as soon as obj created, it should read the yaml files and create artifact folder related to data ingestion
@@ -56,3 +57,18 @@ class ConfigurationManager:
         )
 
         return data_validation_config # return the object
+    
+
+
+
+    def get_data_transformation_config(self) -> DataTransformationConfig:
+        config = self.config.data_transformation
+
+        create_directories([config.root_dir])
+
+        data_transformation_config = DataTransformationConfig(
+            root_dir=config.root_dir,
+            data_path=config.data_path
+        )
+
+        return data_transformation_config

@@ -15,3 +15,9 @@ class DataValidationConfig:
     status_file: str
     unzip_data_dir: Path
     all_schema: dict # reading from schema.yaml, where we already store that what were the cols(features) present at the time of training
+
+
+@dataclass(frozen=True)
+class DataTransformationConfig:
+    root_dir: Path
+    data_path: Path

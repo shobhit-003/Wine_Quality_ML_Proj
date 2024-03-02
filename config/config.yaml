@@ -13,3 +13,9 @@ data_validation:
   root_dir: artifacts/data_validation
   unzip_data_dir: artifacts/data_ingestion/winequality-red.csv # we want to check whether this downloaded data has all the columns or not
   status_file: artifacts/data_validation/status.txt # get the status whether every thing is okay or not
+
+
+
+data_transformation:
+  root_dir: artifacts/data_transformation
+  data_path: artifacts/data_ingestion/winequality-red.csv

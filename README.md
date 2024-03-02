@@ -20,7 +20,7 @@ first try to build whole model like from getting data to predicting in one go an
 
 # Project Workflow
 
-1. update config.yaml -> first we will configure it for data ingestion we are fetching data from somewhere (it's not necessary that data will be always on our local machine) and where we want to store it in our local machine
+1. update config.yaml -> here we write that what all things we are going to create and then define attributes of particular thing with their source(in case if fetching) or destination(in case creating)
 
 2. update schema.yaml -> needed for machine learning algorithms, as in ML we work with hand-crafted features, we create a record of features and their type, useful at the time of validation to check whether all the columns(features) are present or not
 

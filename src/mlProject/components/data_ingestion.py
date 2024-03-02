@@ -20,7 +20,9 @@ i.e. in config manager we are giving the values to variables defined in the enti
 even config.configuration doesn't have DataIngestionConfig, it is also importing it from entity
 """
 
-# import entity i.e. skeleton bcoz we will call config. in the constructor and give life to it
+# import entity i.e. skeleton (just to tell that we are going to use this type of data type). So what about the value?
+# in the pipeline we will call life func i.e. get_data_ingestion_config to give life to it
+# and then we will call component i.e. this func and we will pass the alive obj in the constructor of this class
 from mlProject.entity.config_entity import DataIngestionConfig
 
 class DataIngestion:
