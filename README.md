@@ -58,4 +58,8 @@ for data  validation - validate all the columns
 
 # Task - 4
 
-Create model trainer, model eval components by using the steps shown in task - 3.
+1. Create model trainer, model eval components by using the steps shown in task - 3.
+
+2. Create prediction pipeline -> We have to create data pipeline using pickle because when user is giving data to model and if it is not clean then we need transformations to perform on this data, here data was clean so we are doing only train_test_split, if there is more transformation steps then it's good to make pipeline using pickle.
+
+*Note : We have to make prediction pipeline only in the pipeline folder i.e. no entity, configuration and all.
